@@ -4,7 +4,10 @@ var addLowerCase;
 var addUpperCase;
 var addSpecialCharacters;
 var addNumbers;
+var passwordString;
+var finalPassword=[];
 var passwordArray=[];
+var newPassword=[];
 var upperCase=["A","B","C","D","E","F","G","H","I",
 "J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var lowerCase=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
@@ -45,8 +48,27 @@ while(!lengthOfPassword){
       addLowerCase= confirm("Will this password be containing lower case letters?");
       addSpecialCharacters= confirm("Will this password be containing special characters.");
       addNumbers= confirm("Will this password contain numbers?");
-      if(addUpperCase && addLowerCase && addNumbers && addSpecialCharacters){
-passwordArray.concat(upperCase, lowerCase, num, specialCharacters);
+      if(addUpperCase){
+passwordArray=passwordArray.concat(upperCase);
+alert("Password will contain upper case letters.");
       }
-}
-
+      if(addLowerCase){
+        passwordArray=passwordArray.concat(lowerCase);
+        alert("Password will contain lower case letters.");
+      }
+      if(addSpecialCharacters){
+        passwordArray=passwordArray.concat(specialCharacters);
+        alert("Password will contain special characters.");
+      }
+      if(addNumbers){
+        passwordArray=passwordArray.concat(num);
+        alert("Password will contain numbers.");
+      }
+      for(var i=0; i< lengthOfPassword; i++){
+        newPassword=passwordArray[Math.floor(Math.random()*passwordArray.length)];
+        finalPassword.push(newPassword);
+      }
+      passwordString=finalPassword.join("");
+      return passwordString;
+      
+    }
