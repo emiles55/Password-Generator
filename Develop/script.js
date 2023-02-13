@@ -68,7 +68,8 @@ alert("Password will contain upper case letters.");
         newPassword=passwordArray[Math.floor(Math.random()*passwordArray.length)];
         finalPassword.push(newPassword);
       }
-      passwordString=finalPassword.join("");
+      passwordString=finalPassword.toString();
+      passwordString=passwordString.replaceAll(",","");
       return passwordString;
       
     }
