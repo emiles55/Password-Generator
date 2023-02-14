@@ -26,3 +26,4 @@ THEN a password is generated that matches the selected criteria
 
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
+![Web capture_14-2-2023_02413_](https://user-images.githubusercontent.com/46115810/218647544-1d6f5250-594a-4acf-a6b7-5ae713d2e3d8.jpeg)
